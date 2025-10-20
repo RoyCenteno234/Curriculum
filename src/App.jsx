@@ -24,38 +24,28 @@ function App() {
   animate={{ opacity: 1, y: 0 }}   
   transition={{ duration: 2 }}  >
       <Container>
-      <div id="sobre-mi">
-      <h2 className="text-center p-5 mt-5">SOBRE MI </h2>
-       <div className="d-flex  justify-content-center align-items-center gap-1">
+   <div id="sobre-mi">
+            <h2 className="text-center p-3 mt-5">SOBRE MI</h2>
+            <div className="d-flex flex-wrap justify-content-center align-items-start gap-3">
+              <div className="card col-lg-4 col-md-6 col-10 mb-3 text-center">
+                <img src={fotoPersonal} alt='IMAGEN PERSONAL' className='img img-fluid rounded' />
+              </div>
 
-
-          <div className='card w-25 ms-auto me-auto'>
-          <img src={fotoPersonal} alt='IMAGEN PERSONAL' className='img img-fluid'></img>
-        </div>
-
-
-    
-        <div className="card w-50 ms-auto me-auto border border-white "style={{background: "#1a1a1a" }}>
-          <div className="card-body">
-            <p className="mt-4 ms-5 fs-5 text-white" > Hola, soy Roy Mauricio Centeno Ramirez <br/>
-                Soy un desarrollador Full Stack centrado en tecnologias modernas
-                como React y SpringBoot.<br/> Domino tanto el frontend como el backend, integrando APIs REST 
-                manejando autenticacion con JWT <br/> y bases de datos como MySQL.Tambien utilizo herramientas como 
-                bootstrap, Tailwind CSS y Git/GitHub <br/> para la construccion de interfaces atractivas 
-                y mantener un control de versiones eficiente.
-                <br/>
-                Apasionado por la innovacion, buscando participar en proyectos que unan tecnologia y creatividad para generar soluciones
-                de alto impacto.
-                </p>
+              <div className="card col-lg-6 col-md-6 col-10 mb-3 border border-white" style={{ background: "#1a1a1a" }}>
+                <div className="card-body">
+                  <p className="mt-4 ms-3 fs-5 text-white">
+                    Hola, soy Roy Mauricio Centeno Ramirez <br />
+                    Soy un desarrollador Full Stack centrado en tecnologías modernas como React y SpringBoot. <br />
+                    Domino tanto el frontend como el backend, integrando APIs REST manejando autenticación con JWT <br />
+                    y bases de datos como MySQL. También utilizo herramientas como Bootstrap, Tailwind CSS y Git/GitHub <br />
+                    para la construcción de interfaces atractivas y mantener un control de versiones eficiente. <br />
+                    Apasionado por la innovación, buscando participar en proyectos que unan tecnología y creatividad para generar soluciones
+                    de alto impacto.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        
-       
-       
-      
-
-       </div>
-       </div>
        </Container>
 
           

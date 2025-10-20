@@ -54,92 +54,103 @@ export const Contacto = ()=>{
 
     }
   return (
-    <Container>
-      <div className="d-flex justify-content-between align-items-center ">
+     <Container className="p-3">
+      <div className="d-flex flex-wrap justify-content-center gap-4">
+
+        {/* Formulario */}
         <div
-          className="card mx-auto text-white border border-white mt-4"
-          style={{ maxWidth: "500px", width: "90%", background: "#1a1a1a" }}
+          className="card text-white border border-white"
+          style={{ maxWidth: "500px", width: "100%", background: "#1a1a1a" }}
         >
           <form ref={form} onSubmit={sendEmail}>
-            <div className="row">
-              <div className="col-md-10 mx-auto">
-                <div className="mt-5">
-                  <label className="form-label">NOMBRE</label>
-                  <input
-                    type="text"
-                    name="from_name"
-                    className="form-control"  
-                    placeholder="INGRESA TU NOMBRE"
-                    required
-                  />
-                </div>
+            <div className="p-3">
 
-                <div className="mt-5">
-                  <label className="form-label">CORREO ELECTRÓNICO</label>
-                  <input
-                    type="email"
-                    name="from_email"
-                    className="form-control"
-                    placeholder="INGRESA TU CORREO"
-                    required
-                  />
-                </div>
-
-                <div className="mt-5">
-                  <label className="form-label">ASUNTO</label>
-                  <input
-                    type="text"
-                    name="subject"
-                    className="form-control"
-                    placeholder="¿SOBRE QUÉ GUSTAS HABLAR?"
-                    required
-                  />
-                </div>
-
-                <div className="mt-5">
-                  <label className="form-label">MENSAJE</label>
-                  <textarea
-                    name="message"
-                    className="form-control"
-                    placeholder="CUÉNTAME MÁS ACERCA DE TU PROYECTO..."
-                    rows="4"
-                    required
-                  />
-                </div>
-
-                <div className="text-center">
-                  <button
-                    type="submit"
-                    className="btn btn-md mt-5 mb-5 text-white border border-white"
-                  >
-                    ENVIAR
-                  </button>
-                </div>
+              <div className="mb-3">
+                <label className="form-label">NOMBRE</label>
+                <input
+                  type="text"
+                  name="from_name"
+                  className="form-control"
+                  placeholder="INGRESA TU NOMBRE"
+                  required
+                />
               </div>
+
+              <div className="mb-3">
+                <label className="form-label">CORREO ELECTRÓNICO</label>
+                <input
+                  type="email"
+                  name="from_email"
+                  className="form-control"
+                  placeholder="INGRESA TU CORREO"
+                  required
+                />
+              </div>
+
+              <div className="mb-3">
+                <label className="form-label">ASUNTO</label>
+                <input
+                  type="text"
+                  name="subject"
+                  className="form-control"
+                  placeholder="¿SOBRE QUÉ GUSTAS HABLAR?"
+                  required
+                />
+              </div>
+
+              <div className="mb-3">
+                <label className="form-label">MENSAJE</label>
+                <textarea
+                  name="message"
+                  className="form-control"
+                  placeholder="CUÉNTAME MÁS ACERCA DE TU PROYECTO..."
+                  rows="4"
+                  required
+                />
+              </div>
+
+              <div className="text-center">
+                <motion.button
+                  type="submit"
+                  className="btn btn-md mt-3 mb-3 text-white border border-white"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  ENVIAR
+                </motion.button>
+              </div>
+
             </div>
           </form>
         </div>
 
-        <div className="card w-50 ms-auto me-auto border border-white" style={{background: "#1a1a1a"}}>
-          <h2 className="text-center mt-3 text-white">Informacion de contacto</h2>
-            <p className="text-center text-white fs-4"> Correo Electronico - roycen804@gmail.com <br/>
-                Telefono - 461 10213388 <br/>
-                Ciudad- Celaya Guanajuato.
+        {/* Información de contacto y CV */}
+        <div
+          className="card text-white border border-white"
+          style={{ maxWidth: "400px", width: "100%", background: "#1a1a1a" }}
+        >
+          <div className="p-3 text-center">
+            <h2 className="mt-3">Información de contacto</h2>
+            <p className="fs-6 mt-2">
+              Correo Electrónico: roycen804@gmail.com <br />
+              Teléfono: 461 10213388 <br />
+              Ciudad: Celaya, Guanajuato
             </p>
 
-                <motion.a
-                
-                href={Curriculum}
-                download="Curriculum.pdf"
-                 className="btn btn-outline-light mt-3 col-md-4 ms-auto me-auto mb-3"
-                  whileHover={{ scale: 1.05 }} 
-                    whileTap={{ scale: 0.9 }}     
-                 transition={{ type: "spring", stiffness: 300 }}
-                >
-                 📄 Descargar CV
-                </motion.a>
+            <motion.a
+              href={Curriculum}
+              download="Curriculum.pdf"
+              className="btn btn-outline-light mt-3"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              📄 Descargar CV
+            </motion.a>
           </div>
         </div>
+
+      </div>
     </Container>
   );
 };

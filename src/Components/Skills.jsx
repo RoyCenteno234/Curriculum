@@ -21,22 +21,19 @@ export const Skills= ()=>{
 
 
     return(
-        <div className="d-flex flex-wrap justify-content-center gap-4 mt-2 mb-3">
-           
-            {skill.map((s,i)=>(
-                <div
-                key={i}
-                className="text-center"
-                style={{transition: "transform 0.3s", cursor:"pointer"}}
-                onMouseEnter={(e)=> (e.target.style.transform  = "scale(1.2)")}
-                onMouseLeave={(e) => (e.target.style.transform = "scale(1)")}
-                >
-                    <div className="fs-1"> {s.icon}</div>
-                    <div className="text-white">{s.name}</div>
-
-                </div>
-            ))}
-            
-        </div>
+     <div className="d-flex flex-wrap justify-content-around gap-3 mt-2 mb-3">
+  {skill.map((s, i) => (
+    <div
+      key={i}
+      className="text-center"
+      style={{ display: "inline-block", minWidth: "80px", transition: "transform 0.3s", cursor: "pointer" }}
+      onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.2)")}
+      onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
+    >
+      <div className="fs-1">{s.icon}</div>
+      <div className="text-white">{s.name}</div>
+    </div>
+  ))}
+</div>
     )
 }
