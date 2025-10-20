@@ -1,0 +1,32 @@
+    .navbar-custom {
+      background-color: #6ec1f3; /* Azul claro */
+      margin: 20px auto;
+      padding: 12px 40px;
+      border-radius: 15px;
+      max-width: 90%;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .navbar-custom .nav-link {
+      color: white !important;
+      font-weight: 500;
+      margin: 0 12px;
+      transition: color 0.3s ease;
+    }
+
+    .navbar-custom .nav-link:hover {
+      color: #002b5c !important; /* Azul más oscuro al pasar el mouse */
+    }
+
+    .navbar-custom .navbar-brand {
+      color: white !important;
+      font-weight: bold;
+    }
+
+    .navbar-toggler {
+      border-color: white;
+    }
+
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23ffffff' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255,0.8)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
